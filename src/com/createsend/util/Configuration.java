@@ -47,7 +47,11 @@ public class Configuration {
     public void addPropertiesFile(String filename) throws IOException {
         properties.load(ClassLoader.getSystemResourceAsStream(filename));
     }
-    
+
+    public void addProperties(Properties properties) {
+      this.properties = properties;
+    }
+
     public String getApiKey() {
         return properties.getProperty("createsend.apikey");
     }
