@@ -48,8 +48,8 @@ public class Configuration {
         properties.load(ClassLoader.getSystemResourceAsStream(filename));
     }
 
-    public void addProperties(Properties properties) {
-      this.properties = properties;
+    public void setProperty(String key, String value){
+       properties.setProperty(key, value);
     }
 
     public String getApiKey() {
